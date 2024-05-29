@@ -9,7 +9,7 @@ document
     var qrCodeContainer = document.getElementById("qrcode");
     qrCodeContainer.innerHTML = ""; // Очистити попередній QR-код, якщо він є
 
-    var url = window.location.origin + "/apkFolder/UniShedule.apk";
+    var url = window.location.origin + "/ScheduleDemo/public/UniShedule.apk";
     console.log(url);
     // Використовуємо бібліотеку QRCode.js для генерації QR-коду
     new QRCode(qrCodeContainer, url);
