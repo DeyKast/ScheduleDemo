@@ -84,29 +84,55 @@
             <div>
               <ul class="chatList">
                 <li class="chatListItem">
-                  <p>Привіт ! <br>
-                    Давай я розповім тобі про наш додаток</br>
+                  <p>
+                    Привіт ! <br />
+                    Давай я розповім тобі про наш додаток<br />
+                  </p>
                 </li>
+
                 <li class="chatListItem">
                   <p>
-                    Ми створили його для того, щоб ти міг зручно переглядати<br>
+                    Ми створили його для того, щоб ти міг зручно переглядати<br />
                     розклад занять як онлайн так і офлайн
                   </p>
                 </li>
                 <li class="chatListItem">
                   <p>
-                    &#8226; Створювати профілі для перегляду розкладу різних груп <br>
-                    &#8226; записувати нотатки для предметів<br>
-                    &#8226; налаштовувати сповіщення про пари <br>
+                    &#8226; Створювати профілі для перегляду розкладу різних
+                    груп <br />
+                    &#8226; записувати нотатки для предметів<br />
+                    &#8226; налаштовувати сповіщення про пари <br />
                     &#8226; та створювати нагадування для предмету
                   </p>
                 </li>
                 <li class="chatListItem">
                   <p>Тож завантажуй додаток за посиланнями нижче !</p>
-                  <ul>
-                    <li><button id="downloadButton">Download APK</button></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                  <ul class="buttonsList">
+                    <li>
+                      <button id="downloadButton" class="linkButton apkButton">
+                        <img
+                          src="./images/logos/android-logo.png"
+                          alt="android"
+                        />
+                        <p>Android <br />.apk</p>
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#" class="linkButton">
+                        <img
+                          src="./images/logos/play-market-logo.png"
+                          alt="android"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="linkButton">
+                        <img
+                          src="./images/logos/app-store-logo.png"
+                          alt="android"
+                        />
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -123,13 +149,13 @@
         </div>
       </div>
     </main>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal is-hidden">
       <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Скануйте QR-код для завантаження на телефон:</p>
-          <div id="qrcode"></div>
+        <span class="close">&times;</span>
+        <p class="modalText">Скануйте QR-код для завантаження на телефон:</p>
+        <div id="qrcode"></div>
       </div>
-  </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>

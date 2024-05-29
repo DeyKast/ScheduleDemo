@@ -3,7 +3,7 @@ document
   .addEventListener("click", function () {
     // Показати модальне вікно
     var modal = document.getElementById("modal");
-    modal.style.display = "block";
+    modal.classList.toggle("is-hidden");
 
     // Згенерувати QR-код
     var qrCodeContainer = document.getElementById("qrcode");
@@ -20,13 +20,13 @@ document
   .getElementsByClassName("close")[0]
   .addEventListener("click", function () {
     var modal = document.getElementById("modal");
-    modal.style.display = "none";
+    modal.classList.toggle("is-hidden");
   });
 
 // Закрити модальне вікно при натисканні за його межами
 window.addEventListener("click", function (event) {
   var modal = document.getElementById("modal");
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.classList.toggle("is-hidden");
   }
 });
