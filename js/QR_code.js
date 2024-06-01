@@ -13,7 +13,7 @@ document
 const DownloadApp = (isMobile) => {
   console.log(isMobile);
 
-  var url = window.location.origin + "/public/UniShedule.apk";
+  var url = window.location.origin + "/ScheduleDemo/public/UniShedule.apk";
 
   if (isMobile) {
     window.location.href = url;
