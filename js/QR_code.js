@@ -1,21 +1,33 @@
 document
   .getElementById("downloadButton")
   .addEventListener("click", function () {
-    // Показати модальне вікно
+    DownloadApp(window.innerWidth <= 768);
+  });
+
+document
+  .getElementById("downloadNowButton")
+  .addEventListener("click", function () {
+    DownloadApp(true);
+  });
+
+const DownloadApp = (isMobile) => {
+  console.log(isMobile);
+
+  var url = window.location.origin + "/public/UniShedule.apk";
+
+  if (isMobile) {
+    window.location.href = url;
+  } else {
     var modal = document.getElementById("modal");
     modal.classList.toggle("is-hidden");
 
-    // Згенерувати QR-код
     var qrCodeContainer = document.getElementById("qrcode");
-    qrCodeContainer.innerHTML = ""; // Очистити попередній QR-код, якщо він є
+    qrCodeContainer.innerHTML = "";
 
-    var url = window.location.origin + "/ScheduleDemo/public/UniShedule.apk";
-    console.log(url);
-    // Використовуємо бібліотеку QRCode.js для генерації QR-коду
     new QRCode(qrCodeContainer, url);
-  });
+  }
+};
 
-// Закрити модальне вікно при натисканні на X
 document
   .getElementsByClassName("close")[0]
   .addEventListener("click", function () {
@@ -23,7 +35,6 @@ document
     modal.classList.toggle("is-hidden");
   });
 
-// Закрити модальне вікно при натисканні за його межами
 window.addEventListener("click", function (event) {
   var modal = document.getElementById("modal");
   if (event.target == modal) {
