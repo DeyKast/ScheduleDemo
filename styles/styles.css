@@ -6,6 +6,7 @@
   --dark-purple-color: #381e72;
   --main-purple-color: #6750a4;
   --accent-purple-color: #4f378b;
+  --light-purple-color: #d0bcff;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
     align-items: center;
   }
@@ -67,9 +68,18 @@ img {
   width: 100vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .container {
     width: 768px;
+
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
 
     padding-left: 80px;
     padding-right: 80px;
@@ -85,7 +95,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .section {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -101,10 +111,11 @@ img {
   padding-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .mainSection {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     padding-bottom: none;
   }
@@ -113,6 +124,8 @@ img {
 .swiper {
   padding-top: 23px;
   background-color: var(--accent-purple-color);
+
+  border-radius: 20px;
 }
 
 .phoneSwiper {
@@ -126,9 +139,10 @@ img {
   justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .phoneSwiper {
     scale: 1;
+    width: auto;
   }
 }
 
@@ -139,9 +153,9 @@ img {
   pointer-events: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .phoneImg {
-    left: -19px;
+    left: -18px;
   }
 }
 
@@ -153,11 +167,11 @@ img {
 }
 
 .swiper {
-  width: 270px;
+  width: 280px;
 }
 
 .swiperPhoto {
-  width: 270px;
+  width: 280px;
   height: 570px;
 }
 
@@ -177,9 +191,9 @@ img {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contentWrapper {
-    padding-right: 120px;
+    padding-right: 0px;
     padding-left: 85px;
 
     width: 100%;
@@ -201,7 +215,15 @@ img {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+  .titleWrapper {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .titleWrapper {
     flex-direction: row;
 
@@ -217,15 +239,37 @@ img {
   font-size: calc(14px + 18 * (100vw / 768));
 }
 
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: calc(24px + 12 * (100vw / 1024));
+  }
+}
+
 .titleLink {
   font-size: calc(10px + 14 * (100vw / 768));
-  letter-spacing: 10%;
+  letter-spacing: 2px;
   font-weight: 300;
   text-decoration: underline;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .titleLink {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .active {
+    display: none;
+  }
 }
 
 .chatWrapper {
   width: 100%;
+
+  background-color: var(--background-color);
 }
 
 .chatList {
@@ -235,7 +279,7 @@ img {
   gap: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .chatList {
     gap: 18px;
   }
@@ -251,10 +295,10 @@ img {
   background-color: var(--main-purple-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .chatListItem {
     padding: 15px 20px;
-    width: max-content;
+    width: auto;
   }
 }
 
@@ -266,7 +310,7 @@ img {
   text-align: end;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .chatListItem > p {
     font-size: 20px;
     line-height: 26px;
@@ -285,7 +329,7 @@ img {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .buttonsList {
     gap: none;
     flex-direction: row;
@@ -307,6 +351,7 @@ img {
   gap: 5px;
 
   min-width: 150px;
+  max-width: 200px;
   width: 50%;
 
   opacity: 80%;
@@ -331,7 +376,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .linkButton {
     width: auto;
   }
@@ -376,12 +421,72 @@ img {
   display: none;
 }
 
+.textInput {
+  width: calc(100% - 70px);
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff20;
+  color: var(--white-text-color);
+
+  transition: all 200ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff50;
+    outline: none;
+  }
+}
+
+.talkingBoyImgWrapper {
+  position: absolute;
+  bottom: -44px;
+  right: -30px;
+
+  scale: 0.4;
+}
+
+@media screen and (min-width: 1024px) {
+  .talkingBoyImgWrapper {
+    right: -50px;
+  }
+}
+
+.parallaxCircle {
+  position: fixed;
+  border-radius: 50%;
+  opacity: 50%;
+  z-index: -10;
+}
+
+.leftCircle {
+  width: calc(200px + 100 * (100vw / 768));
+  height: calc(200px + 100 * (100vw / 768));
+
+  top: -15%;
+  left: -15%;
+
+  background-color: var(--accent-purple-color);
+}
+
+.rightCircle {
+  width: calc(150px + 100 * (100vw / 768));
+  height: calc(150px + 100 * (100vw / 768));
+
+  top: 25%;
+  right: -10%;
+
+  background-color: var(--light-purple-color);
+}
+
 /* Стилізація модального вікна */
 .modal {
   position: fixed;
   z-index: 99999;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
 
@@ -468,45 +573,4 @@ img {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-.textInput {
-  width: calc(100% - 70px);
-  height: 50px;
-  border-radius: 30px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #ffffff20;
-  color: var(--white-text-color);
-
-  transition: all 200ms linear;
-
-  &:hover,
-  &:focus {
-    background-color: #ffffff50;
-    outline: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .talkingBoyImgWrapper {
-    min-width: 100%;
-  }
-}
-
-.talkingBoyImgWrapper {
-  position: absolute;
-  bottom: -40px;
-  right: -30px;
-
-  scale: 0.4;
-}
-
-@media screen and (min-width: 768px) {
-  .talkingBoyImgWrapper {
-    bottom: 0px;
-    right: -60px;
-
-    scale: 1;
-  }
 }

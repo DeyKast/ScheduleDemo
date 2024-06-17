@@ -1,18 +1,7 @@
-document
-  .getElementById("downloadButton")
-  .addEventListener("click", function () {
-    DownloadApp(window.innerWidth <= 768);
-  });
-
-document
-  .getElementById("downloadNowButton")
-  .addEventListener("click", function () {
-    DownloadApp(true);
-  });
+const firstDownloadButton = document.getElementById("firstDownloadButton");
+const secondDownloadButton = document.getElementById("secondDownloadButton");
 
 const DownloadApp = (isMobile) => {
-  console.log(isMobile);
-
   var url = window.location.origin + "/ScheduleDemo/public/UniShedule.apk";
 
   if (isMobile) {
@@ -27,6 +16,20 @@ const DownloadApp = (isMobile) => {
     new QRCode(qrCodeContainer, url);
   }
 };
+
+firstDownloadButton.addEventListener("click", function () {
+  DownloadApp(window.innerWidth <= 768);
+});
+
+secondDownloadButton.addEventListener("click", function () {
+  DownloadApp(window.innerWidth <= 768);
+});
+
+document
+  .getElementById("downloadNowButton")
+  .addEventListener("click", function () {
+    DownloadApp(true);
+  });
 
 document
   .getElementsByClassName("close")[0]
