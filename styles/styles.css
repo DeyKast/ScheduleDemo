@@ -126,6 +126,10 @@ img {
   background-color: var(--accent-purple-color);
 
   border-radius: 20px;
+
+  -webkit-box-shadow: 0px 0px 20px 10px var(--background-color);
+  -moz-box-shadow: 0px 0px 20px 10px var(--background-color);
+  box-shadow: 0px 0px 20px 10px var(--background-color);
 }
 
 .phoneSwiper {
@@ -155,7 +159,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .phoneImg {
-    left: -18px;
+    left: -15px;
   }
 }
 
@@ -172,7 +176,7 @@ img {
 
 .swiperPhoto {
   width: 280px;
-  height: 570px;
+  height: 572px;
 }
 
 .contentWrapper {
@@ -213,6 +217,8 @@ img {
   gap: 10px;
 
   width: 100%;
+
+  z-index: 10;
 }
 
 @media screen and (min-width: 1024px) {
@@ -251,7 +257,16 @@ img {
   font-weight: 300;
   text-decoration: underline;
 
+  transition: color 0.3s linear, text-decoration-color 0.3s linear;
+
   cursor: pointer;
+}
+
+.titleLink:hover,
+.titleLink:focus,
+.titleLink:active {
+  color: var(--light-purple-color);
+  text-decoration-color: var(--light-purple-color);
 }
 
 @media screen and (min-width: 1024px) {
@@ -270,6 +285,10 @@ img {
   width: 100%;
 
   background-color: var(--background-color);
+
+  -webkit-box-shadow: 0px 0px 30px 35px var(--background-color);
+  -moz-box-shadow: 0px 0px 30px 35px var(--background-color);
+  box-shadow: 0px 0px 30px 35px var(--background-color);
 }
 
 .chatList {
@@ -458,26 +477,46 @@ img {
   border-radius: 50%;
   opacity: 50%;
   z-index: -10;
+
+  -webkit-box-shadow: 0px 0px 20px 5px black;
+  -moz-box-shadow: 0px 0px 20px 5px black;
+  box-shadow: 0px 0px 20px 5px black;
 }
 
 .leftCircle {
   width: calc(200px + 100 * (100vw / 768));
   height: calc(200px + 100 * (100vw / 768));
 
-  top: -15%;
-  left: -15%;
+  top: -13%;
+  left: -13%;
 
-  background-color: var(--accent-purple-color);
+  background-color: var(--dark-purple-color);
 }
 
 .rightCircle {
   width: calc(150px + 100 * (100vw / 768));
   height: calc(150px + 100 * (100vw / 768));
 
-  top: 25%;
+  top: 30%;
   right: -10%;
 
   background-color: var(--light-purple-color);
+}
+
+.secondLeftCircle {
+  width: calc(50px + 100 * (100vw / 768));
+  height: calc(50px + 100 * (100vw / 768));
+
+  bottom: 20%;
+  left: 10%;
+
+  background-color: var(--accent-purple-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .secondLeftCircle {
+    bottom: 10%;
+  }
 }
 
 /* Стилізація модального вікна */
